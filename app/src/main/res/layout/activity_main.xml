@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/clockShow"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/clockimage_only"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/noItemCardView"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clockShow"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="5dp"
+        >
+        <TextView
+            android:id="@+id/noItemTextView"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@color/button_color"
+            android:text="No task Right Now"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="normal"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noItemCardView"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="5dp"
+        >
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@color/button_color"
+            android:text="Add Task"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
